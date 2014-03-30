@@ -67,7 +67,7 @@ namespace TestScriptCS.Scripts
                     if (check == -1)
                     {
                         //市民取得
-                        allPed = World.GetPeds(Player.Character.Position, 50.0f);
+                        allPed = Cacher.GetPeds(Player.Character.Position, 50.0f);
                     }
 
                     //取得した周辺市民を2秒に1回ずつ調べる

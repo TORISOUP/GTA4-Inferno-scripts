@@ -69,7 +69,7 @@ namespace TestScriptCS.Scripts
             if (TimerPed > 0)
             {
                 TimerPed--;
-                var ap = World.GetPeds(Player.Character.Position, 50);
+                var ap = Cacher.GetPeds(Player.Character.Position, 50);
                 foreach (var ped in ap)
                 {
                     //
@@ -122,7 +122,7 @@ namespace TestScriptCS.Scripts
 
                 if (carList.Count < 5)
                 {
-                    var av = World.GetVehicles(Player.Character.Position, 100);
+                    var av = Cacher.GetVehicles(Player.Character.Position, 100);
                     foreach (var veh in av)
                     {
                        

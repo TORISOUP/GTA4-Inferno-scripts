@@ -155,7 +155,7 @@ namespace TestScriptCS.Scripts
             D = Obj.Velocity;
             D.Normalize();
             Po = Obj.Position;
-            Peds = World.GetPeds(Obj.Position + 20.0f * D, 15.0f);
+            Peds = Cacher.GetPeds(Obj.Position + 20.0f * D, 15.0f);
 
             for (int i = 0; i < Peds.Length; i++)
             {
@@ -187,7 +187,7 @@ namespace TestScriptCS.Scripts
             int index = -1;
             Vector3 D = Obj.Velocity;
             D.Normalize();
-            Peds = World.GetPeds(Obj.Position , 100.0f);
+            Peds = Cacher.GetPeds(Obj.Position , 100.0f);
 
             for (int i = 0; i < Peds.Length; i++)
             {

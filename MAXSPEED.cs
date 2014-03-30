@@ -20,7 +20,7 @@ namespace TestScriptCS.Scripts
             inputCheckerMaxSpeed.AddCheckKeys(new Keys[] { Keys.A, Keys.L, Keys.L, Keys.O, Keys.N });
             this.Tick += new EventHandler(this.MaxSpeed_Tick);
             KeyDown += new GTA.KeyEventHandler(MaxSpeed_KeyDown);
-            allV = GTA.World.GetVehicles(Player.Character.Position, 100.0f);
+            allV = Cacher.GetVehicles(Player.Character.Position, 100.0f);
         }
         private void MaxSpeed_Tick(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace TestScriptCS.Scripts
             {
                 try
                 {
-                    allV = GTA.World.GetVehicles(Player.Character.Position, 80.0f);
+                    allV = Cacher.GetVehicles(Player.Character.Position, 80.0f);
                     int Length = allV.Length;
                     if (Length <= 0) { return; }
                     for (int i = 0; i < Length; i++)

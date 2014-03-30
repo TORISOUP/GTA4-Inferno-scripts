@@ -32,7 +32,7 @@ namespace TestScriptCS.Scripts
                 {
                     //手配度が付いているとき
 
-                    Vehicle[] allV = GTA.World.GetVehicles(Player.Character.Position,50.0f);
+                    Vehicle[] allV = Cacher.GetVehicles(Player.Character.Position,50.0f);
 
                     for (int i = 0, length = allV.Length; i < length; i++)
                     {

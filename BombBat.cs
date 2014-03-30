@@ -79,7 +79,7 @@ namespace TestScriptCS.Scripts
 
                 try
                 {
-                    ped = World.GetPeds(Player.Character.Position, 50.0f);
+                    ped = Cacher.GetPeds(Player.Character.Position, 50.0f);
 
                     for (int i = 0, length = ped.Length; i < length; i++)
                     {

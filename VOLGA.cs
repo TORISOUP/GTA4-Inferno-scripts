@@ -64,8 +64,8 @@ namespace TestScriptCS.Scripts
                     ped.NoLongerNeeded();
                     World.AddExplosion(vec, ExplosionType.Rocket, 20.0f);
 
-                    var AP = World.GetPeds(vec, 50.0f);
-                    var AV = World.GetVehicles(vec, 50.0f);
+                    var AP = Cacher.GetPeds(vec, 50.0f);
+                    var AV = Cacher.GetVehicles(vec, 50.0f);
                     GTA.Object[] AO = World.GetAllObjects();
 
                     for (int i = 0; i < AP.Length; i++)

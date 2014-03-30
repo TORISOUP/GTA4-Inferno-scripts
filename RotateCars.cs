@@ -29,7 +29,7 @@ namespace TestScriptCS.Scripts
        
 
             if (!AF) { return; }
-            Vehicle[] AV = World.GetVehicles(Player.Character.Position, 50.0f);
+            Vehicle[] AV = Cacher.GetVehicles(Player.Character.Position, 50.0f);
 
             for (int i = 0; i < AV.Length; i++)
             {

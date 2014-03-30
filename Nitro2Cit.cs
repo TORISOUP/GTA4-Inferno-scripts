@@ -44,7 +44,7 @@ namespace TestScriptCS.Scripts
             inputCheckerN2C.AddCheckKeys(new Keys[] { Keys.A, Keys.L, Keys.L, Keys.O, Keys.N });
             this.Tick += new EventHandler(this.N2C_Tick);
             KeyDown += new GTA.KeyEventHandler(N2C_KeyDown);
-            allV = GTA.World.GetVehicles(Player.Character.Position, 100.0f);
+            allV = Cacher.GetVehicles(Player.Character.Position, 100.0f);
             this.PerFrameDrawing += new GraphicsEventHandler(this.Kyori_PerFrameDrawing);
 
         }
@@ -74,7 +74,7 @@ namespace TestScriptCS.Scripts
                     Interval = 500; //普段の6倍実行する（readmeと違う
                 }
 
-                allV = GTA.World.GetVehicles(Player.Character.Position, 100.0f);
+                allV = Cacher.GetVehicles(Player.Character.Position, 100.0f);
                 int Length = allV.Length;
                 if (Length <= 0) { return; }
                 for (int i = 0; i < Length; i++)

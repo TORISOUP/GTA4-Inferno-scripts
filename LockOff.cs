@@ -25,7 +25,7 @@ namespace TestScriptCS.Scripts
 
             if (inputCheckerMOD.Check(0))
             {
-                Vehicle[] v = GTA.World.GetVehicles(Player.Character.Position, 50.0f);
+                Vehicle[] v = Cacher.GetVehicles(Player.Character.Position, 50.0f);
 
                 for (int i = 0, length = v.Length; i < length; i++)
                 {

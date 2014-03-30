@@ -64,14 +64,14 @@ namespace TestScriptCS.Scripts
 
                 }
 
-                var AV1 = World.GetVehicles(Player.Character.Position, 100);
+                var AV1 = Cacher.GetVehicles(Player.Character.Position, 100);
                 foreach (var vec in AV1)
                 {
                     if (!Exists(vec) || Player.Character.CurrentVehicle == vec) { continue; }
                     vec.FreezePosition = false;
                 }
 
-                var AP1 = World.GetPeds(Player.Character.Position, 100);
+                var AP1 = Cacher.GetPeds(Player.Character.Position, 100);
                 foreach (var ped in AP1)
                 {
                     if (!Exists(ped) || ped == Player.Character) { continue; }
@@ -101,7 +101,7 @@ namespace TestScriptCS.Scripts
                 
             }
 
-            var AV = World.GetVehicles(Player.Character.Position, 30);
+            var AV = Cacher.GetVehicles(Player.Character.Position, 30);
             foreach (var vec in AV)
             {
                 if (!Exists(vec) ||  vec.isRequiredForMission) { continue; }
@@ -123,7 +123,7 @@ namespace TestScriptCS.Scripts
                 }
             }
 
-            var AP = World.GetPeds(Player.Character.Position, 30);
+            var AP = Cacher.GetPeds(Player.Character.Position, 30);
             foreach (var ped in AP)
             {
                 if (!Exists(ped) || ped == Player.Character || ped.isRequiredForMission) { continue; }

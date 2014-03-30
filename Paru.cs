@@ -268,7 +268,7 @@ namespace TestScriptCS.Scripts
                             Game.DisplayText("No.004 周辺車両一斉発火", 4000);
                             msgBuff = "車は爆発物";
                             IntervalTimer = 30;
-                            Vehicle[] v = World.GetVehicles(Player.Character.Position, 100.0f);
+                            Vehicle[] v = Cacher.GetVehicles(Player.Character.Position, 100.0f);
                             for (int i = 0; i < v.Length; i++)
                             {
                                 if (Exists(v[i])) { v[i].PetrolTankHealth = -1.0f; }
@@ -363,7 +363,7 @@ namespace TestScriptCS.Scripts
                             msgBuff = "テンション爆発";
                             IntervalTimer = 30;
                             {
-                                Ped[] allped = GTA.World.GetPeds(Player.Character.Position, 100.0f);
+                                Ped[] allped = Cacher.GetPeds(Player.Character.Position, 100.0f);
                                 for (int i = 0; i < allped.Length; i++)
                                 {
                                     if (allped[i] == Player.Character) { continue; }
@@ -371,7 +371,7 @@ namespace TestScriptCS.Scripts
                                     GTA.World.AddExplosion(allped[i].Position, ExplosionType.Default, 1.0f);
                                 }
 
-                                Vehicle[] aV = GTA.World.GetVehicles(Player.Character.Position, 100.0f);
+                                Vehicle[] aV = Cacher.GetVehicles(Player.Character.Position, 100.0f);
                                 for (int i = 0; i < aV.Length; i++)
                                 {
                                     if (Player.Character.CurrentVehicle == aV[i]) { continue; }
@@ -460,7 +460,7 @@ namespace TestScriptCS.Scripts
                                     Game.DisplayText("No.014 空飛ぼうぜ！", 4000);
                                     {
 
-                                        Ped[] allped = GTA.World.GetPeds(Player.Character.Position, 200.0f);
+                                        Ped[] allped = Cacher.GetPeds(Player.Character.Position, 200.0f);
                                         for (int i = 0; i < allped.Length; i++)
                                         {
 
@@ -468,7 +468,7 @@ namespace TestScriptCS.Scripts
 
                                         }
 
-                                        Vehicle[] aV = GTA.World.GetVehicles(Player.Character.Position, 200.0f);
+                                        Vehicle[] aV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
                                         for (int i = 0; i < aV.Length; i++)
                                         {
 
@@ -546,7 +546,7 @@ namespace TestScriptCS.Scripts
                             msgBuff = "東セラ製3302（式）熱光学迷彩";
                             IntervalTimer = 30;
                             {
-                                Ped[] ap = GTA.World.GetPeds(Player.Character.Position, 100.0f);
+                                Ped[] ap = Cacher.GetPeds(Player.Character.Position, 100.0f);
                                 for (int i = 0; i < ap.Length; i++)
                                 {
                                     if (!Exists(ap[i])) { continue; }
@@ -562,7 +562,7 @@ namespace TestScriptCS.Scripts
                             msgBuff = "再帰性反射材";
                             IntervalTimer = 30;
                             {
-                                Vehicle[] av = GTA.World.GetVehicles(Player.Character.Position, 200.0f);
+                                Vehicle[] av = Cacher.GetVehicles(Player.Character.Position, 200.0f);
                                 for (int i = 0; i < av.Length; i++)
                                 {
                                     if (!Exists(av[i])) { continue; }
@@ -584,12 +584,12 @@ namespace TestScriptCS.Scripts
                                     Timer = 200;
                                     msgBuff = "狙撃祭りだヒャッハー！";
                                     IntervalTimer = 30;
-                                    AP = GTA.World.GetPeds(Player.Character.Position, 100.0f);
+                                    AP = Cacher.GetPeds(Player.Character.Position, 100.0f);
                                     miniMsg = "狙撃祭り";
                                 }
                                 if (--Timer > 0 && !StopFlag)
                                 {
-                                    if (Timer % 15 == 0) { AP = GTA.World.GetPeds(Player.Character.Position, 100.0f); }
+                                    if (Timer % 15 == 0) { AP = Cacher.GetPeds(Player.Character.Position, 100.0f); }
                                     if (Exists(ped)) { ped.Delete(); }
                                     for (int i = 0; i < 10; i++)
                                     {
@@ -806,8 +806,8 @@ namespace TestScriptCS.Scripts
                                         ped.NoLongerNeeded();
                                         World.AddExplosion(vec, ExplosionType.Rocket, 20.0f);
 
-                                        AP = World.GetPeds(vec, 50.0f);
-                                        AV = World.GetVehicles(vec, 50.0f);
+                                        AP = Cacher.GetPeds(vec, 50.0f);
+                                        AV = Cacher.GetVehicles(vec, 50.0f);
                                         GTA.Object[] AO = World.GetAllObjects();
 
                                         for (int i = 0; i < AP.Length; i++)
@@ -905,7 +905,7 @@ namespace TestScriptCS.Scripts
                                 InitFlag = false;
                                 Timer = 10 * 10;
                                 miniMsg = "車両強盗だぜ";
-                                AV = World.GetVehicles(Player.Character.Position, 200.0f);
+                                AV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
                                 AP = new Ped[AV.Length];
                                 for (int i = 0; i < AV.Length; i++)
                                 {
@@ -1004,7 +1004,7 @@ namespace TestScriptCS.Scripts
         
                                 InitFlag = false;
 
-                                AV = World.GetVehicles(Player.Character.Position, 300.0f);
+                                AV = Cacher.GetVehicles(Player.Character.Position, 300.0f);
                             }
 
                             foreach (Vehicle veh in AV)
@@ -1128,7 +1128,7 @@ namespace TestScriptCS.Scripts
                             msgBuff = string.Format("歩道が広いではないか");
                             IntervalTimer = 30;
 
-                            AV = World.GetVehicles(Player.Character.Position, 200.0f);
+                            AV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
                             for (int i = 0; i < AV.Length; i++)
                             {
                                 if (Exists(AV[i]))
@@ -1227,8 +1227,8 @@ namespace TestScriptCS.Scripts
                                     GTA.World.AddExplosion(Player.Character.Position, ExplosionType.Default, 0.0f, true, true, 0.5f);
 
 
-                                    AV = World.GetVehicles(Player.Character.Position, 200.0f);
-                                    AP = World.GetPeds(Player.Character.Position, 200.0f);
+                                    AV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
+                                    AP = Cacher.GetPeds(Player.Character.Position, 200.0f);
                                     AO = World.GetAllObjects();
 
                                     for (int i = 0; i < AV.Length; i++)
@@ -1445,7 +1445,7 @@ namespace TestScriptCS.Scripts
                                 miniMsg = "車ふわふわ";
                                 Timer = 300;
                             }
-                            AV = World.GetVehicles(Player.Character.Position, 100.0f);
+                            AV = Cacher.GetVehicles(Player.Character.Position, 100.0f);
                             for (int i = 0; i < AV.Length; i++)
                             {
                                 if (!Exists(AV[i])) { continue; }
@@ -1505,7 +1505,7 @@ namespace TestScriptCS.Scripts
                             }
                             if (Timer % 10 == 0)
                             {
-                                AP = World.GetPeds(Player.Character.Position, 200.0f);
+                                AP = Cacher.GetPeds(Player.Character.Position, 200.0f);
                                 if (AP.Length < 5) { break; }
                                 Ped a = AP[rnd.Next(0, AP.Length)];
                                 Ped b = AP[rnd.Next(0, AP.Length)];
@@ -1619,7 +1619,7 @@ namespace TestScriptCS.Scripts
 
                                 EndFlag = true;
 
-                                AV = World.GetVehicles(Player.Character.Position, 100);
+                                AV = Cacher.GetVehicles(Player.Character.Position, 100);
 
                                 for (int i = 0; i < AV.Length; i++)
                                 {
@@ -1642,7 +1642,7 @@ namespace TestScriptCS.Scripts
 
                                 EndFlag = true;
 
-                                AV = World.GetVehicles(Player.Character.Position, 100);
+                                AV = Cacher.GetVehicles(Player.Character.Position, 100);
 
                                 for (int i = 0; i < AV.Length; i++)
                                 {
@@ -1684,7 +1684,7 @@ namespace TestScriptCS.Scripts
                                 IntervalTimer = 30;
 
                                 vec = Player.Character.Position.Around(10.0f) + new Vector3(0, 0, 10);
-                                AP = World.GetPeds(Player.Character.Position, 100.0f);
+                                AP = Cacher.GetPeds(Player.Character.Position, 100.0f);
                                 InitFlag = false;
                                 Timer = 30;
                                 miniMsg = "人花火";
@@ -1845,7 +1845,7 @@ namespace TestScriptCS.Scripts
 
                             if (Timer > 0)
                             {
-                                AV = World.GetVehicles(Player.Character.Position, 50.0f);
+                                AV = Cacher.GetVehicles(Player.Character.Position, 50.0f);
                                 foreach (Vehicle V in AV)
                                 {
                                     if (!Exists(V)||V.isRequiredForMission || Player.Character.isInVehicle(V))
@@ -1890,8 +1890,8 @@ namespace TestScriptCS.Scripts
 
                             if (Timer > 0)
                             {
-                                AV = World.GetVehicles(Player.Character.Position, 10.0f);
-                                AP = World.GetPeds(Player.Character.Position,10.0f);
+                                AV = Cacher.GetVehicles(Player.Character.Position, 10.0f);
+                                AP = Cacher.GetPeds(Player.Character.Position,10.0f);
                                 
                                 foreach(Vehicle veh in AV){
                                     if(!Exists(veh) || veh.isRequiredForMission || Player.Character.isInVehicle(veh)){continue;}
@@ -1959,7 +1959,7 @@ namespace TestScriptCS.Scripts
                             if (Timer > 0)
                             {
 
-                                AP = World.GetPeds(Player.Character.Position, 100.0f);
+                                AP = Cacher.GetPeds(Player.Character.Position, 100.0f);
 
 
 
@@ -2004,7 +2004,7 @@ namespace TestScriptCS.Scripts
                                 Player.Character.Invincible = true;
                                 if (Timer % 5 == 0)
                                 {
-                                    AV = World.GetVehicles(Player.Character.Position, 200.0f);
+                                    AV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
 
                                     foreach (Vehicle veh in AV)
                                     {
@@ -2032,7 +2032,7 @@ namespace TestScriptCS.Scripts
                                 IntervalTimer = 30;
 
                             
-                                AP = World.GetPeds(Player.Character.Position, 200.0f);
+                                AP = Cacher.GetPeds(Player.Character.Position, 200.0f);
                                 foreach (var p in AP)
                                 {
                                     if (Exists(p) && Player.Character != p)

@@ -66,6 +66,7 @@ namespace TestScriptCS.Scripts
 {
     class Niko:Script
     {
+        /*
         string comment;
         NikoInfo niko;
         string text;
@@ -162,7 +163,7 @@ namespace TestScriptCS.Scripts
         void Thef()
         {
 
-            var AV = World.GetVehicles(Player.Character.Position, 200.0f);
+            var AV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
 
             foreach (var car in AV)
             {
@@ -184,7 +185,7 @@ namespace TestScriptCS.Scripts
 
         void Nitoro()
         {
-            var allV = GTA.World.GetVehicles(Player.Character.Position, 100.0f);
+            var allV = Cacher.GetVehicles(Player.Character.Position, 100.0f);
             int Length = allV.Length;
             if (Length <= 0) { return; }
             for (int i = 0; i < Length; i++)
@@ -360,7 +361,7 @@ namespace TestScriptCS.Scripts
 
                 if (comment.Contains("くるましょうしつ"))
                 {
-                    var AV = World.GetVehicles(Player.Character.Position, 70.0f);
+                    var AV = Cacher.GetVehicles(Player.Character.Position, 70.0f);
                     foreach (Vehicle V in AV)
                     {
                         if (!Exists(V) || V.isRequiredForMission || Player.Character.isInVehicle(V))
@@ -413,14 +414,6 @@ namespace TestScriptCS.Scripts
                     Mess += "くるまついか ";
                 }
 
-
-
-                /*
-               if (comment.Contains("くるまはなび"))
-                {
-                    HANABI.CarStart();
-                    SetComment("くるまはなびを受け付けました");
-                }*/
 
                 #region ROMAN
                 if (comment.Contains("ろーまん"))
@@ -859,6 +852,6 @@ namespace TestScriptCS.Scripts
                 }
             }
         }
-
+*/
     }
 }

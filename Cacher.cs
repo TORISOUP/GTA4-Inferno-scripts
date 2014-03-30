@@ -63,8 +63,8 @@ namespace TestScriptCS.Scripts
         {
             lock (lockObject)
             {
-                pedList = GTA.World.GetAllPeds();
-                vehicleList = GTA.World.GetAllVehicles();
+                pedList = GTA.World.GetPeds(Player.Character.Position, 200.0f);
+                vehicleList = GTA.World.GetVehicles(Player.Character.Position, 300.0f);
             }
         }
   

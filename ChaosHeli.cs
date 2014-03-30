@@ -194,7 +194,7 @@ namespace TestScriptCS.Scripts
                         Ped[] Tlist=new Ped[0];
                         try
                         {
-                            Tlist = World.GetPeds(Player.Character.Position,100.0f);
+                            Tlist = Cacher.GetPeds(Player.Character.Position,100.0f);
 
                         }
                         catch

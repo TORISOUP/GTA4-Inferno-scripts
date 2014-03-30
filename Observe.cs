@@ -45,7 +45,7 @@ namespace TestScriptCS.Scripts
 
             if (!Exists(tar) || tar.isDead || tar.Position.DistanceTo(cam.Position)>50.0f || TIME>10*15)
             {
-                Ped[] ped = World.GetPeds(cam.Position, 30.0f);
+                Ped[] ped = Cacher.GetPeds(cam.Position, 30.0f);
                 tar = ped[rnd.Next(0,ped.Length)];
                 
 

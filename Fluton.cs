@@ -48,7 +48,7 @@ namespace TestScriptCS.Scripts
                 ActiveTimer--;
                 try
                 {
-                    peds = GTA.World.GetPeds(Player.Character.Position, 2.0f);
+                    peds = Cacher.GetPeds(Player.Character.Position, 2.0f);
                 }
                 catch
                 {

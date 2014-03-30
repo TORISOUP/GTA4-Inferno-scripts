@@ -61,7 +61,7 @@ namespace TestScriptCS.Scripts
             if (!IsonoActive) { return; }
             if (InitFlag)
             {
-                allped = GTA.World.GetPeds(Player.Character.Position, 200.0f);
+                allped = Cacher.GetPeds(Player.Character.Position, 200.0f);
                 for (int i = 0; i < allped.Length; i++)
                 {
 
@@ -69,7 +69,7 @@ namespace TestScriptCS.Scripts
 
                 }
 
-                aV = GTA.World.GetVehicles(Player.Character.Position, 200.0f);
+                aV = Cacher.GetVehicles(Player.Character.Position, 200.0f);
                 for (int i = 0; i < aV.Length; i++)
                 {
 
