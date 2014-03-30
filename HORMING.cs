@@ -5,6 +5,7 @@ using _InputChecker;
 using System.Drawing;
 namespace TestScriptCS.Scripts
 {
+    //ホーミングRPG
     public class RPGTarget : Script
     {
         public GTA.Object o;

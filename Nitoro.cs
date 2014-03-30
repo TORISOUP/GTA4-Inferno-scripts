@@ -6,7 +6,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //ニトロですね
     public class Nitro : Script
     {
         Ped player;

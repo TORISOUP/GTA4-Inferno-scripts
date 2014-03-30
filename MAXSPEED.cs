@@ -6,6 +6,7 @@ using _InputChecker;
 namespace TestScriptCS.Scripts
 {
     //市民暴走運転
+    //クラス名意味不明
     public class MAXSPEED : Script
     {
         InputChecker inputCheckerMaxSpeed = new InputChecker();

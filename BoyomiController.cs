@@ -8,7 +8,7 @@ using System.Threading;
 namespace TestScriptCS.Scripts
 {
 
-
+    //棒読みちゃんでリスナーが遊びはじめた時に強制停止する
     public class Boyomi : Script
     {
 

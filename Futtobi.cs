@@ -6,6 +6,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
+    //確かボルガか何かで使ってた気がする…
     public class Futtobi: Script
     {
         GTA.Font screenFont;

@@ -7,7 +7,7 @@ using _InputChecker;
 namespace TestScriptCS.Scripts
 {
 
-
+    //車の耐久値バーを一瞬出すやつだと思う
     public class DamageBars : Script
     {
         Vehicle NowV;

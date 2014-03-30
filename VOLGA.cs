@@ -5,7 +5,7 @@ using _InputChecker;
 using System.Collections.Generic;
 namespace TestScriptCS.Scripts
 {
-
+    //ボルガですね
     public class VOLGA : Script
     {
 

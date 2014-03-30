@@ -6,6 +6,7 @@ using _InputChecker;
 namespace TestScriptCS.Scripts
 {
     //神風パトカー
+    //なんだこのクラス名
     public class MOD1 : Script
     {
         InputChecker inputCheckerMOD = new InputChecker();

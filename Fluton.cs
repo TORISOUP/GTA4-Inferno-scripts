@@ -5,7 +5,8 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //フルトン回収
+    //なんかうまく動かないけどロジックが意味不明
     public class Flton : Script
     {
         int index,pedindex;

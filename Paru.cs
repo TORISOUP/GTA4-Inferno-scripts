@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
 
-
+//糞コード
 namespace TestScriptCS.Scripts
 {
     

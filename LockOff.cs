@@ -5,6 +5,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
+    //周辺の車の鍵をあける
     public class Lockoff : Script
     {
         InputChecker inputCheckerMOD = new InputChecker();

@@ -6,7 +6,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //画面に一瞬だけ数字で車のダメージが出るやつ
     public class Damaged : Script
     {
         public RectangleF rect;

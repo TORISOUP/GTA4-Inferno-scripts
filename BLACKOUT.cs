@@ -6,7 +6,7 @@ using GTA;
 
 namespace TestScriptCS.Scripts{
 
-   // ### This example will show you how to load and draw textures ###
+   // パルプンテ：ブラックアウトで動く
     public class BLACKOUT : Script
     {
         Random rnd;

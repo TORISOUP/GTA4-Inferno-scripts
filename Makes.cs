@@ -5,7 +5,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //ふわふわするやつだ
     public class Jump : Script
     {
         InputChecker inputCheckerMOD = new InputChecker();

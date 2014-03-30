@@ -5,7 +5,7 @@ using _InputChecker;
 using System.Collections.Generic;
 namespace TestScriptCS.Scripts
 {
-   
+   //みんなだいすきひとはなび
     public class HANABI : Script
     {
         int TimerPed, TimerVeh;

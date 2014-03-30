@@ -11,7 +11,7 @@ using _ItemListForm;
 
 namespace TestScriptCS.Scripts
 {
-
+    //仲間のHPを出す
     public class FriendsHP : Script
     {
         int OldTeamMember;

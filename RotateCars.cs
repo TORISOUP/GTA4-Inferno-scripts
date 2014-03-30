@@ -5,6 +5,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
+    //車くるくるさせるやつ
     public class RC : Script
     {
         bool AF;

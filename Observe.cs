@@ -5,7 +5,8 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //HUDが消えた時に復旧させるやつ？
+    //こんなのあったっけ…
     public class Ovserve : Script
     {
         Camera cam;

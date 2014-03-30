@@ -6,13 +6,10 @@ using GTA;
 
 namespace TestScriptCS.Scripts{
 
-   // ### This example will show you how to load and draw textures ###
+    //車の耐久値をマップに重ねて表示する
+    //クラス名がサンプルコードのままなのか（困惑）
     public class TextureDrawingExample : Script
     {
-
-        // To use textures in your script, add them to your Visual Studio Project (in the "Solution Explorer").
-        // Afterwards, select the added image and change the option "Build Action" to "Embedded Resource".
-        // This will embed the image into your script and allows you to load it via Resources.GetTexture .
 
         private Texture Gauge;
         private Texture Needle;

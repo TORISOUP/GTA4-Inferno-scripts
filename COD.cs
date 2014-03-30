@@ -6,7 +6,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //死因
     public class CoD : Script
     {
  

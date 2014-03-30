@@ -5,7 +5,7 @@ using _InputChecker;
 
 namespace TestScriptCS.Scripts
 {
-
+    //やるきのないMOD
     public class PlayerRagdoll : Script
     {
         bool RagdollFlag = false;

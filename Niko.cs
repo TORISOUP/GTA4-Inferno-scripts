@@ -61,7 +61,7 @@ namespace remoteGTA
 
 }
 
-
+//ISONOモードで使うやつ
 namespace TestScriptCS.Scripts
 {
     class Niko:Script
