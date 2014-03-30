@@ -253,9 +253,9 @@ namespace TestScriptCS.Scripts
                     }
                 }
             }
-            catch
+            catch(Exception e2)
             {
-                Game.DisplayText("@HORMING ERROR in Main", 4000);
+                Game.DisplayText("@HORMING ERROR in Main : " +e2.Message , 4000);
                 Share.ScriptError = true;
             }
             bool Pflag = false;
