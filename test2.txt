@@ -1,0 +1,86 @@
+﻿using System;
+using System.Windows.Forms;
+using System.Drawing;
+using GTA;
+
+namespace TestScriptCS.Scripts
+{
+
+    public class Test : Script
+    {
+
+        //ここに使う変数を書く
+        //MODで共有したいもの（人、車、フラグ）を書く
+        Ped player; //人
+ 
+        public Test()
+        {
+                //コンストラクタ
+                //MOD起動時に一番最初に1回だけ実行される
+                //普通はここで初期化処理を行う
+
+                //変数playerをニコにしておく
+            player = Player.Character;
+
+              //MODの動作周期をIntervakにミリ秒単位で指定
+              //下の2つは定型文としてコピペでおｋ
+            Interval = 100;
+            this.Tick += new EventHandler(this.test_Tick);
+         
+
+                //キー入力を見る場合はこれも書く
+            this.KeyDown += new GTA.KeyEventHandler(this.test_KeyDown);
+        }
+
+
+
+
+        //ここに周期的に実行したい処理を書く
+        private void test_Tick(object sender, EventArgs e)
+        {
+            //ニコが死んだ時に30m以内の車を一斉爆破する
+            if (!player.isAlive)
+            {
+                Vehicle[] AllV = GTA.World.GetVehicles(player.Position, 30.0f);
+                for (int i = 0, length = AllV.Length; i < length; i++)
+                {
+                    if (Exists(AllV[i]))
+                    {
+                        if (AllV[i].isAlive)
+                        {
+                            //車が壊れていないなら車を爆破
+                            AllV[i].Explode();
+                        }
+                    }
+                    
+                }
+            }
+           
+        }
+
+
+
+
+                       //キーボードが押された時のみ実行される処理
+        private void test_KeyDown(object sender, GTA.KeyEventArgs e)
+        {
+           　　　  　　 //押されたキーが何かを調べる
+            if (e.Key == Keys.F1)
+            {
+                         //ニコから30m以内にある最も近い車を取得
+                Vehicle pV = GTA.World.GetClosestVehicle(player.Position, 30.0f);
+
+                         //取得成功したか（車が存在するか）をチェック
+                if (Exists(pV))
+                {
+                            //取得成功なら
+                    if (pV.isAlive)
+                    {
+                           //車が壊れていないなら車を爆破
+                        pV.Explode();
+                    }
+                }
+            }
+        }
+    }
+}
