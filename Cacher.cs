@@ -21,8 +21,16 @@ namespace TestScriptCS.Scripts
         {
             lock (lockObject)
             {
-                if (pedList.Length == 0) { return new Ped[0]; }
-                return pedList.Where(p=>p!=null).Where(p=>p.Exists()).ToArray<Ped>();
+                try
+                {
+                    if (pedList.Length == 0) { return new Ped[0]; }
+                    return pedList.Where(p => p != null).Where(p => p.Exists()).ToArray<Ped>();
+                }
+                catch (Exception e)
+                {
+                    //極稀に例外が出るのでその時はnice catchする
+                    return new Ped[0]; 
+                }
             }
         }
 
@@ -30,9 +38,16 @@ namespace TestScriptCS.Scripts
         {
             lock (lockObject)
             {
-                if (pedList.Length == 0) { return new Ped[0]; }
-                //リストから一定距離のものだけを返す
-                return pedList.Where(p => p != null).Where(p=>p.Exists()).Where(p=>Position.DistanceTo(p.Position) <= length ).ToArray<Ped>();
+                try
+                {
+                    if (pedList.Length == 0) { return new Ped[0]; }
+                    //リストから一定距離のものだけを返す
+                    return pedList.Where(p => p != null).Where(p => p.Exists()).Where(p => Position.DistanceTo(p.Position) <= length).ToArray<Ped>();
+                }
+                catch
+                {
+                    return new Ped[0]; 
+                }
             }
         }
 
@@ -40,8 +55,15 @@ namespace TestScriptCS.Scripts
         {
             lock (lockObject)
             {
-                if (vehicleList.Length == 0) { return new Vehicle[0]; }
-                return vehicleList.Where(v => v != null).Where(v=>v.Exists()).ToArray<Vehicle>();
+                try
+                {
+                    if (vehicleList.Length == 0) { return new Vehicle[0]; }
+                    return vehicleList.Where(v => v != null).Where(v => v.Exists()).ToArray<Vehicle>();
+                }
+                catch
+                {
+                    return new Vehicle[0]; 
+                }
             }
         }
 
@@ -49,9 +71,16 @@ namespace TestScriptCS.Scripts
         {
             lock (lockObject)
             {
-                if (vehicleList.Length == 0) { return new Vehicle[0]; }
-                //リストから一定距離のものだけを返す
-                return vehicleList.Where(v => v != null).Where(v => v.Exists()).Where(v => Position.DistanceTo(v.Position) <= length).ToArray<Vehicle>();
+                try
+                {
+                    if (vehicleList.Length == 0) { return new Vehicle[0]; }
+                    //リストから一定距離のものだけを返す
+                    return vehicleList.Where(v => v != null).Where(v => v.Exists()).Where(v => Position.DistanceTo(v.Position) <= length).ToArray<Vehicle>();
+                }
+                catch
+                {
+                    return new Vehicle[0]; 
+                }
             }
         }
 
